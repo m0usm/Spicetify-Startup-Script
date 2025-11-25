@@ -33,11 +33,25 @@ The two main files used in this setup are:
 * Administrator rights for the initial setup.
 * An active internet connection during the login process.
 
-### Setup Instructions
+### Setup Instructions (How to Run)
 
-1.  **Download:** Download the [`setup_autostart.bat`](setup_autostart.bat) file from this repository.
-2.  **Run:** Right-click the `setup_autostart.bat` file and select **"Run as administrator"**.
-3.  **Finished:** The routine is set up. The script will now execute automatically upon every subsequent user login.
+1.  **Download Script via Terminal:**
+    Open PowerShell or CMD and run the following command to download the installer directly to your current folder:
+
+    ```powershell
+    iwr -uri [https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat](https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat) -OutFile "setup_autostart.bat"
+    ```
+
+2.  **Execute as Administrator (Recommended Method):**
+    * Right-click the downloaded `setup_autostart.bat` file and select **"Run as administrator"**.
+
+3.  **Alternative Execution via Terminal (Drag & Drop):**
+    * Open the Command Prompt (`cmd`) or PowerShell **as Administrator**.
+    * **Drag the `setup_autostart.bat` file** into the Terminal window to automatically insert its full path.
+    * Press **Enter** to run the script.
+
+4.  **Finished:** The routine is set up. The script will now execute automatically upon every subsequent user login.
+
 ---
 
 ## ⚠️ Important Notes
@@ -58,10 +72,13 @@ To stop the automatic execution, simply delete the created shortcut:
 
 1.  Press `Win` + `R` and type `shell:startup` and press Enter.
 2.  Delete the shortcut named **`Spicetify Autostart.lnk`**.
-3.  Optionally, you can also delete the `C:\Scripts` folder to remove the script files.
+3.  Optional, you can also delete the `C:\Scripts` folder to remove the script files.
 
 ---
 
+## 📜 License
+
+This project is licensed under the **[MIT License](LICENSE)**.
 ## 📜 License
 
 This project is licensed under the **[MIT License](LICENSE)**.

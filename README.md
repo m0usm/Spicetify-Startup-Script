@@ -39,7 +39,7 @@ The two main files used in this setup are:
     Open PowerShell or CMD and run the following command to download the installer directly to your current folder:
 
     ```powershell
-    iwr -uri [https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat](https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat) -OutFile "setup_autostart.bat"
+    iwr -uri https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat](https://raw.githubusercontent.com/m0usm/spicetify-startup-script/refs/heads/main/setup_autostart.bat) -OutFile "setup_autostart.bat"
     ```
 
 2.  **Execute as Administrator (Recommended Method):**

@@ -81,3 +81,4 @@ ECHO.
 ECHO Installation cancelled by user.
 PAUSE
 EXIT /B 1
+

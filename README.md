@@ -15,7 +15,7 @@ The script automates the following steps to execute the official installation co
 1.  **Script Folder Creation:** It creates a persistent directory at `C:\Scripts`.
 2.  **PowerShell Script Creation:** The file `spicetify_install.ps1` containing the official install command is saved to `C:\Scripts`.
 3.  **Wrapper Script Creation:** The file `spicetify_start.bat` is created to execute PowerShell **invisibly** (`start /min`).
-4.  **Startup Shortcut:** A shortcut (`.lnk`) pointing to `spicetify_start.bat` is placed in the current user's Startup folder (`%APPDATA%...\Startup`).
+4.  **Startup Shortcut:** A shortcut (`.lnk`) is placed in the current user's Startup folder.
 
 ## 🛠️ Usage
 
@@ -32,22 +32,25 @@ The two main files used in this setup are:
 
 ### Setup Instructions (How to Run)
 
-1.  **Download:** Download the [`setup_autostart.bat`](setup_autostart.bat) file from this repository (click the file, then click "Download Raw File").
+1.  **Download:** Download the [`setup_autostart.bat`](setup_autostart.bat) file from this repository.
 
 2.  **Execute as Administrator:**
     * Right-click the downloaded `setup_autostart.bat` file and select **"Run as administrator"**.
 
-3.  **CRITICAL INTERRUPTION: Type 'Y' and Enter**
-    Immediately after execution, a PowerShell window may appear asking to install a **missing component** required for **Spicetify features (such as the Marketplace)**.
-    
+3.  **MANUAL CONFIRMATION (Batch Prompt): Type 'Y' and Enter**
+    After starting, the console will prompt: **"Do you want to start the installation?"**. Type **Y** to proceed.
+
+4.  **CRITICAL INTERRUPTION (PowerShell): Type 'Y' and Enter**
+    Immediately after the batch script continues, a PowerShell window may appear asking to install a **missing component** required for **Spicetify features (such as the Marketplace)**.
+
     * **You MUST type `Y` and press Enter** to allow the script to proceed. This manual confirmation is mandatory.
 
-4.  **Alternative Execution via Terminal (Drag & Drop):**
+5.  **Alternative Execution via Terminal (Drag & Drop):**
     * Open the Command Prompt (`cmd`) or PowerShell **as Administrator**.
-    * **Drag the `setup_autostart.bat` file** into the Terminal window to automatically insert its full path.
-    * Press **Enter** to run the script (and perform the **CRITICAL INTERRUPTION** if prompted).
+    * **Drag the `setup_autostart.bat` file** into the Terminal window.
+    * Press **Enter** to run the script (and perform **Steps 3 & 4** if prompted).
 
-5.  **Finished:** The routine is set up. The script will now execute automatically upon every subsequent user login.
+6.  **Finished:** The routine is set up. The script will now execute automatically upon every subsequent user login.
 
 ---
 
@@ -60,7 +63,7 @@ The two main files used in this setup are:
 > **Reason:** The script downloads and executes remote code via PowerShell (`iwr ... | iex`), which is often flagged by scanners as **Generic Payload** or **Suspicious Behavior**.
 > 
 > * **This is a False Positive:** The script performs only the official Spicetify installation command.
-> * If you trust the Spicetify source, **you must allow execution** or **add an exclusion** for the `setup_autostart.bat` file in your antivirus program before starting.
+> * If you trust the Spicetify source, **you must allow execution** or **add an exclusion** for the `setup_autostart.bat` file in your antivirus program **before starting**.
 > * **Important:** This alarm affects **only** the initial setup script, not the recurring automatic startup execution.
 
 ### Security

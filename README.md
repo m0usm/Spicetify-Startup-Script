@@ -53,12 +53,15 @@ The two main files used in this setup are:
 
 ## ⚠️ Important Notes
 
-### **CRITICAL WARNING: Antivirus/Malwarebytes (False Positive)**
-
-Due to the nature of the script—downloading and executing remote code via PowerShell (`iwr ... | iex`)—your antivirus software (such as Malwarebytes) may flag the `setup_autostart.bat` file or the execution process as a **Generic Payload** or **Suspicious Behavior**.
-
-* This is generally a **False Positive** because the script is only executing the official Spicetify installation command.
-* If you trust the Spicetify source, you can safely **add an exclusion** for the `setup_autostart.bat` file in your antivirus program before running it.
+> ### **🚨 CRITICAL WARNING: Antivirus/Malwarebytes (False Positive)**
+> 
+> Your antivirus software (e.g., Malwarebytes) may flag the `setup_autostart.bat` file **ONLY during its initial execution.**
+> 
+> **Reason:** The script downloads and executes remote code via PowerShell (`iwr ... | iex`), which is often flagged by scanners as **Generic Payload** or **Suspicious Behavior**.
+> 
+> * **This is a False Positive:** The script performs only the official Spicetify installation command.
+> * If you trust the Spicetify source, **you must allow execution** or **add an exclusion** for the `setup_autostart.bat` file in your antivirus program before starting.
+> * **Important:** This alarm affects **only** the initial setup script, not the recurring automatic startup execution.
 
 ### Security
 

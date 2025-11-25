@@ -36,6 +36,12 @@ The two main files used in this setup are:
 
 ## ⚠️ Important Notes
 
+### PowerShell Prompt during Setup
+
+**When running the `setup_autostart.bat` script, a PowerShell window may briefly appear.**
+
+This window might ask you to confirm the installation of the **NuGet Package Provider** or similar necessary dependencies. If prompted, you **must type `Y` and press Enter** to allow the script to proceed with the Spicetify installation. This is a standard Windows security prompt.
+
 ### Security
 
 This script executes a command that downloads code from an external server and runs it immediately (`iwr -useb ... | iex`). Ensure you trust the source (Spicetify CLI) before running the automated script, and consider reviewing the contents of the official installation script periodically.

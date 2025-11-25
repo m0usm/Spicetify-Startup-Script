@@ -61,6 +61,13 @@ This window might ask you to confirm the installation of the **NuGet Package Pro
 
 This script executes a command that downloads code from an external server and runs it immediately (`iwr -useb ... | iex`). Ensure you trust the source (Spicetify CLI) before running the automated script, and consider reviewing the contents of the official installation script periodically.
 
+### Antivirus/Malwarebytes Warning (False Positive)
+
+Due to the nature of the script—downloading and executing remote code via PowerShell (`iwr ... | iex`)—your antivirus software (such as Malwarebytes) may flag the `setup_autostart.bat` file or the execution process as a **Generic Payload** or **Suspicious Behavior**.
+
+* This is a **False Positive** because the script is only executing the official Spicetify installation command.
+* If you trust the Spicetify source, you can safely **add an exclusion** for the `setup_autostart.bat` file in your antivirus program before running it.
+
 ### Uninstallation
 
 To stop the automatic execution, simply delete the created shortcut:

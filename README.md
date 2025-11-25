@@ -15,6 +15,13 @@ The script automates the following steps to execute the official installation co
 
 ## 🛠️ Usage
 
+### Project Files
+
+The two main files used in this setup are:
+
+* **Setup Script:** [`setup_autostart.bat`](setup_autostart.bat) (The executable installer)
+* **Core Command:** [`spicetify_install.ps1`](spicetify_install.ps1) (The underlying PowerShell command)
+
 ### Prerequisites
 
 * Administrator rights for the initial setup.
@@ -22,10 +29,9 @@ The script automates the following steps to execute the official installation co
 
 ### Setup Instructions
 
-1.  **Download:** Download the `setup_autostart.bat` file from this repository.
+1.  **Download:** Download the [`setup_autostart.bat`](setup_autostart.bat) file from this repository.
 2.  **Run:** Right-click the `setup_autostart.bat` file and select **"Run as administrator"**.
 3.  **Finished:** The routine is set up. The script will now execute automatically upon every subsequent user login.
-
 ---
 
 ## ⚠️ Important Notes
